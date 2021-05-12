@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+
+      <title>Aplicacion angular</title>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+      <div class="fondo">
+      <div class="pantalla" [ngStyle]="{backgroundImage:'url(./assets/gulapp.png)'}">
+        <i class="material-icons" (click)="aparece=false" routerLink="limpia" >arrow_back</i>
+          <img src="/assets/leyenda.png" alt="leyendas" *ngIf="aparece"> 
+          <router-outlet></router-outlet>
+        </div>
+        <div class="barra">
+          <div class="cuadradoIcono"><i (click)="aparece=false" routerLink="plan actual" class="material-icons">event_note</i></div>
+          <div class="cuadradoIcono"><i (click)="aparece=false" routerLink="historial menus" class="material-icons">library_books</i></div>
+          <div class="cuadradoIcono"><i (click)="aparece=false" routerLink="comidas" class="material-icons">add_circle_outline</i></div>
+          <div class="cuadradoIcono"><i (click)="aparece=false" routerLink="lista de la compra" class="material-icons">shopping_cart</i></div>
+          <div class="cuadradoIcono"><i (click)="aparece=false" routerLink="perfil de usuario" class="material-icons">account_circle</i></div>
+       </div>    
+      
+     </div> 
+    </body>
+  </html> 
